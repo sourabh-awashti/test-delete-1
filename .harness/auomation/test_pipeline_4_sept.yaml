@@ -1,0 +1,33 @@
+pipeline:
+  name: test pipeline 4 sept dummy
+  identifier: test_pipeline_4_sept
+  projectIdentifier: mohit_test_25_aug
+  orgIdentifier: AAAsunnyGitExp
+  tags: {}
+  stages:
+    - stage:
+        name: tes
+        identifier: tes
+        description: ""
+        tye: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: test
+                  identifier: test
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups:
+                        - account.hiAccountLevelUG
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
