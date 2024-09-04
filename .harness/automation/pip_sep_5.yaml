@@ -1,0 +1,33 @@
+pipeline:
+  name: pip sep 5
+  identifier: pip_sep_5
+  projectIdentifier: Sourabhtest
+  orgIdentifier: default1
+  tags: {}
+  stages:
+    - stage:
+        name: wed
+        identifier: wed
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: dwe
+                  identifier: dwe
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups:
+                        - account.hiAccountLevelUG
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
