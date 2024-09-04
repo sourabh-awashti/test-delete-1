@@ -9,7 +9,7 @@ pipeline:
         name: wed
         identifier: wed
         description: ""
-        type: Approval
+        ty: Approval
         spec:
           execution:
             steps:
