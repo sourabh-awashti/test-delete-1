@@ -9,7 +9,7 @@ pipeline:
         name: d
         identifier: d
         description: ""
-        type: Approval
+        eferf: Approval
         spec:
           execution:
             steps:
